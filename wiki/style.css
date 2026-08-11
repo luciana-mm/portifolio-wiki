@@ -1,0 +1,185 @@
+
+/*FONTES 
+-Oswald
+-Anton
+-'JetBrains Mono'
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --vinho-escuro: #3a0a0a;
+  --vinho-medio: #5c1010;
+  --vinho-claro: #7a1414;
+  --dourado: #d9b24c;
+  --dourado-claro: #e9cd85;
+  --creme: #f4ecd8;
+  --pergaminho: #ece1c6;
+  --tinta: #2a1a12;
+  --tinta-suave: #5c4a3a;
+  --verde-petroleo: #1e3d36;
+}
+
+body{
+    font-family: 'Oswald';
+    background-color: var(--creme);
+}
+
+/* NAV */
+
+nav{
+    background-color: #2a1a12;
+    padding: 10px;
+    border-bottom: 4px solid var(--dourado);
+}
+
+#nav-geral{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+}
+
+#titulo-amarelo{
+    color: #e9cd85;
+    font-size: 25px;
+    font-family: 'Anton';
+    margin-left: 10px;
+}
+
+#lista-nav{
+    display: flex;
+    font-family: 'JetBrains Mono';
+    color: var(--pergaminho);
+    font-size: small;
+    gap: 30px;
+    list-style: none;
+    margin-right: 10px;
+}
+
+.nav-links {
+    cursor: pointer;
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-links:hover {
+    color: var(--dourado);
+    border-bottom: 2px solid var(--dourado);
+}
+
+/* GERAL */
+
+#sessao-topo{
+    background-color: var(--vinho-medio);
+    padding: 40px;
+}
+
+.paragrafo-sessao-geral{
+    color: var(--dourado-claro);
+}
+
+#titulo-principal{
+    font-family: 'Anton';
+    font-size: 70px;
+    color: var(--creme);
+}
+#cor-meio-titulo{
+    color: var(--dourado);
+}
+
+#container-sessao-geral{
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.titulo-pequeno{
+    color: var(--dourado);
+    font-family: 'JetBrains Mono';
+    font-weight: lighter;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.paragrafo-bold{
+    font-weight: bold;
+    color: var(--creme);
+}
+
+/* PRINCIPAL */
+
+#sessao-principal{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+#lateral-direita{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#caixa-lateral-superior{
+    background-color: var(--pergaminho);
+    box-shadow: rgba(149, 157, 165, 0.336) 0px 8px 24px;
+}
+
+.titulo-caixa-lateral{
+    color: #e9cd85;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: 'Anton';
+    padding: 10px;
+    background-color: var(--vinho-escuro);
+}
+
+#container-imagem{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+#bandopolis-imagem{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.caixa-caracteristicas{
+    border: 1px solid var(--dourado);
+}
+
+.caixa-caracteristicas{
+    padding: 15px;
+}
+
+.subcaixa{
+    border-bottom: 1px solid var(--dourado-claro);
+}
+
+.subtitulo-pequeno{
+    color: var(--vinho-claro);
+    font-family: 'JetBrains Mono';
+    font-weight: lighter;
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+.subparagrafo-bold{
+    color: var(--vinho-medio);
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
