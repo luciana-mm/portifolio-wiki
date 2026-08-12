@@ -1,0 +1,219 @@
+/* FONTES
+-Oswald
+-Anton
+-Baloo 2
+-JetBrains Mono
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --bandopolis-fundo-escuro: #3a0a0a;
+  --bandopolis-fundo-medio: #5c1010;
+  --bandopolis-dourado: #d9b24c;
+  --bandopolis-creme: #f4ecd8;
+  --lua-fundo-menta: #cdeee0;
+  --lua-fundo-menta-claro: #d8f2e6;
+  --lua-rosa: #ff6f9c;
+  --lua-roxo-ameixa: #2d2438;
+  --lua-rosa-claro: #ffd6e4c9;
+  --white:#fff
+}
+
+body {}
+
+#sessao-geral {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#bandopolis,
+#portifolio {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: flex 1s cubic-bezier(0.25, 1, 0.5, 1);
+  padding: 0 20px;
+}
+
+#bandopolis {
+  background:
+    radial-gradient(ellipse 700px 400px at 50% 50%, rgba(217, 178, 76, 0.25), transparent 70%),
+    var(--bandopolis-fundo-escuro);
+}
+
+#bandopolis:hover {
+  flex: 1.5;
+}
+
+.sessao-interna {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#subtitulo-bandopolis {
+  color: var(--bandopolis-dourado);
+  font-family: 'JetBrains Mono';
+  font-size: 15px;
+}
+
+#titulo-bandopolis {
+  font-family: 'Anton';
+  color: var(--bandopolis-creme);
+  font-size: 50px;
+
+}
+
+#span-bandopolis {
+  color: var(--bandopolis-dourado);
+}
+
+#paragrafo-bandopolis {
+  color: var(--bandopolis-creme);
+  font-family: 'Oswald';
+}
+
+#botao-entrar-wiki {
+  display: inline-block;
+  padding: 15px 20px;
+  border-radius: 50px;
+  border: 2px solid var(--bandopolis-dourado);
+  background-color: var(--bandopolis-dourado);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: var(--bandopolis-fundo-escuro);
+  font-weight: bold;
+  font-family: 'Oswald';
+  font-size: 20px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#botao-entrar-wiki:hover {
+  transform: translate(0px, -4px);
+  padding: 15px 25px;
+  background-color: var(--bandopolis-creme);
+  color: var(--bandopolis-dourado);
+}
+
+.divisor-linha {
+  width: 4px;
+  height: 100vh;
+  flex-shrink: 0;
+  z-index: 10;
+  background: repeating-linear-gradient(to bottom,
+      var(--bandopolis-dourado) 0px,
+      var(--bandopolis-dourado) 12px,
+      transparent 12px,
+      transparent 18px,
+      var(--lua-rosa) 18px,
+      var(--lua-rosa) 30px,
+      transparent 30px,
+      transparent 36px
+    );
+}
+
+#portifolio {
+  background:
+      radial-gradient(ellipse 700px 400px at 50% 50%, var(--lua-rosa-claro), transparent 70%),
+      var(--lua-fundo-menta-claro);
+}
+
+#portifolio:hover {
+  flex: 1.5;
+}
+
+#subtitulo-portifolio {
+  color: var(--lua-rosa);
+  font-family: 'JetBrains Mono';
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+#titulo-portifolio {
+  font-family: 'Baloo 2';
+  color: var(--lua-roxo-ameixa);
+  font-size: 50px;
+}
+
+#span-portifolio {
+  color: var(--lua-rosa);
+}
+
+#paragrafo-portifolio {
+  color: var(--lua-roxo-ameixa);
+  font-family: 'Oswald';
+}
+
+#botao-portifolio {
+  display: inline-block;
+  padding: 15px 20px;
+  border-radius: 50px;
+  border: 2px solid var(--lua-rosa);
+  background-color: var(--lua-rosa);
+  box-shadow: rgba(255, 111, 156, 0.3) 0px 8px 24px;
+  color: var(--white);
+  font-weight: bold;
+  font-family: 'Baloo 2';
+  font-size: 20px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+} 
+
+#botao-portifolio:hover{
+  transform: translate(0px, -4px);
+  padding: 15px 25px;
+  background-color: var(--white);
+  color: var(--lua-rosa);
+  
+}
+
+@media (max-width:800px){
+  #sessao-geral{
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  #bandopolis, #portifolio{
+    flex: 1 1 auto;
+    min-height: 50vh;   
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  #bandopolis:hover,
+  #portifolio:hover{
+    flex: 1 1 auto;
+  }
+
+  .divisor-linha {
+    width: 100%;
+    height: 4px;
+    background: repeating-linear-gradient(
+        to right,
+        var(--bandopolis-dourado) 0px,
+        var(--bandopolis-dourado) 12px,
+        transparent 12px,
+        transparent 18px,
+        var(--lua-rosa) 18px,
+        var(--lua-rosa) 30px,
+        transparent 30px,
+        transparent 36px
+      );
+  }
+}
