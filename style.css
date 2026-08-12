@@ -1,0 +1,24 @@
+/* FONTES
+-Oswald
+-Anton
+-Baloo 2
+-JetBrains Mono
+ */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+  --bandopolis-fundo-escuro: #3a0a0a;
+  --bandopolis-fundo-medio: #5c1010;
+  --bandopolis-dourado: #d9b24c;
+  --bandopolis-creme: #f4ecd8;
+  --lua-fundo-menta: #cdeee0;
+  --lua-fundo-menta-claro: #d8f2e6;
+  --lua-rosa: #ff6f9c;
+  --lua-roxo-ameixa: #2d2438;
+}

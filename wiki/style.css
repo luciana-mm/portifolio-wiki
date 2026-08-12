@@ -1,5 +1,4 @@
-
-/*FONTES 
+/*FONTES
 -Oswald
 -Anton
 -'JetBrains Mono'
@@ -8,6 +7,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -31,9 +34,13 @@ body{
 /* NAV */
 
 nav{
-    background-color: #2a1a12;
+    background-color: var(--vinho-escuro);
     padding: 10px;
     border-bottom: 4px solid var(--dourado);
+    backdrop-filter: blur(6px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 #nav-geral{
@@ -60,7 +67,14 @@ nav{
     margin-right: 10px;
 }
 
+.nav-links,
+.lista-nesta-pagina{
+    text-decoration: none;
+    display: block;
+}
+
 .nav-links {
+    color: var(--pergaminho);
     cursor: pointer;
     padding-bottom: 6px;
     border-bottom: 2px solid transparent;
@@ -122,9 +136,53 @@ nav{
     padding: 30px;
 }
 
+#visao-geral,
+#historia,
+#campeoes{
+    scroll-margin-top: 90px;
+}
+
+#visao-geral{
+    margin-bottom: 50px;
+}
+
+#historia{
+    margin-bottom: 50px;
+}
+.titulo-sessoes{
+    color: var(--vinho-medio);
+    font-family: 'Anton';
+    font-size: 30px;
+    border-bottom: 3px solid var(--vinho-medio);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+#subtitulo{
+    font-family: 'JetBrains Mono';
+    color: var(--tinta-suave);
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-left: 15px;
+}
+
+p{
+    color: var(--tinta);
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+#letra::first-letter{
+    font-family: 'Anton';
+    font-size: 50px;
+    float: left;
+    line-height: 0.8;
+    padding: 6px 10px 0 0;
+    color: var(--vinho-escuro);
+}
+/* LATERAL */
 #lateral-direita{
-    width: 100%;
-    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -136,7 +194,7 @@ nav{
 }
 
 .titulo-caixa-lateral{
-    color: #e9cd85;
+    color: var(--dourado-claro);
     font-size: 20px;
     font-weight: lighter;
     font-family: 'Anton';
@@ -173,13 +231,229 @@ nav{
     color: var(--vinho-claro);
     font-family: 'JetBrains Mono';
     font-weight: lighter;
-    font-size: 15px;
+    font-size: 12px;
     margin: 10px 0;
 }
 
 .subparagrafo-bold{
-    color: var(--vinho-medio);
+    color: var(--vinho-escuro);
     font-weight: bold;
-    font-size: 15px;
+    font-size: 12px;
     margin-bottom: 10px;
+}
+
+#container-pagina {
+    background-color: var(--pergaminho);
+    border: 1px solid var(--dourado);
+    box-shadow: rgba(149, 157, 165, 0.336) 0px 8px 24px;
+    padding: 24px;
+    width: 100%;
+}
+
+.titulo-nesta-pagina {
+    font-family: 'JetBrains Mono';
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: var(--vinho-escuro);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#lista-links-pagina {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-nesta-pagina {
+    font-family: 'Oswald';
+    color: var(--tinta);
+    font-size: 12px;
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(42, 26, 18, 0.15);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.lista-nesta-pagina:last-child {
+    border-bottom: none;
+}
+
+.lista-nesta-pagina:hover {
+    color: var(--vinho-claro);
+}
+
+
+.grid-campeoes{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    
+}
+
+.card-campeao{
+    background-color: var(--vinho-escuro);
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.336) 0px 8px 24px;
+    border: 1px solid transparent;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-campeao:hover{
+    transform: translateY(-4px);
+    border-color: var(--dourado);
+}
+
+
+.imagem-campeao{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position:center;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-conteudo{
+    padding: 15px;
+}
+
+.card-subtitulo{
+    color: var(--dourado);
+    font-family: 'JetBrains Mono';
+    font-size: 13px;
+}
+
+.card-titulo{
+    color: var(--dourado-claro);
+    font-family: 'Anton';
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.card-descricao{
+    color: var(--pergaminho);
+    font-size: 15px;
+}
+
+.card-tag{
+    font-family: 'JetBrains Mono';
+    color: var(--dourado);
+    font-size: 13px;
+    background-color: var(--vinho-medio);
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: var(--vinho-escuro);
+    padding: 30px;
+    border-top: 5px solid var(--dourado);
+}
+
+#footer-text{
+    font-family: 'JetBrains Mono';
+    color: var(--dourado-claro);
+    font-size: 14px;
+    margin: auto;
+}
+
+
+/*  RESPONSIVO  */
+
+/* TABLET */
+@media (max-width: 1024px) {
+    #sessao-principal{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    #lateral-direita{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    #caixa-lateral-superior,
+    #caixa-lateral-inferior{
+        flex: 1 1 300px;
+    }
+
+    #titulo-principal{
+        font-size: 50px;
+    }
+
+    #container-sessao-geral{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+    #nav-geral{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #lista-nav{
+        gap: 15px;
+        margin-right: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #titulo-amarelo{
+        margin-left: 0;
+    }
+
+    #sessao-topo{
+        padding: 25px;
+    }
+
+    #titulo-principal{
+        font-size: 36px;
+    }
+
+    #container-sessao-geral{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #sessao-principal{
+        padding: 15px;
+        gap: 30px;
+    }
+
+    .titulo-sessoes{
+        font-size: 24px;
+    }
+
+    #letra::first-letter{
+        font-size: 38px;
+    }
+
+    .grid-campeoes{
+        grid-template-columns: 1fr;
+    }
+
+    #lateral-direita{
+        flex-direction: column;
+    }
+
+    #caixa-lateral-superior,
+    #caixa-lateral-inferior{
+        flex: 1 1 auto;
+    }
+
+    footer{
+        padding: 20px;
+    }
+
+    #footer-text{
+        text-align: center;
+        font-size: 12px;
+    }
 }
